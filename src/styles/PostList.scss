@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.postlist {
+  text-align: center;
+
+  h1 {
+    font-family: "inter";
+    font-size: 35px;
+    font-weight: 400;
+    padding: 50px 0 50px 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      background-color: rgba(9, 1, 71, 0.872);
+      border-radius: 15px;
+      padding: 0 150px 20px 150px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      strong{
+        color: antiquewhite;
+        font-family: "inter";
+    font-size: 35px;
+    font-weight: 300;
+    padding: 30px 0 50px 0;
+      }
+      p{
+        color: antiquewhite;
+        font-family: "inter";
+    font-size: 16px;
+    font-weight: 300;
+    padding: 50px 0 50px 0;
+      }
+      button{
+        color: antiquewhite;
+        padding: 10px 25px;
+        background-color: rgb(14, 123, 4, 0.804);
+        border-radius: 15px;
+        border: none;
+        -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.75);
+      transition: 0.6s;
+      &:hover{
+        -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      }
+      }
+    }
+  }
+  button{
+    margin: 50px 0 50px 0;
+    color: antiquewhite;
+        padding: 10px 25px;
+        background-color: rgba(9, 1, 71, 0.808);
+        border-radius: 15px;
+        border: none;
+        -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.75);
+      transition: 0.6s;
+      &:hover{
+        -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.75);
+      }
+  }
+}

@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import PostList from './components/PostList'
+import PostDetails from "./components/PostDetails";
+import Header from "./components/Header";
 
-function App() {
+import './styles/App.scss'
+import axios from "axios";
+
+
+const App = () => {
+  const [posts, setPosts] = useState([]);
+
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://64a177210079ce56e2db1781.mockapi.io/picasso"
+  //     );
+  //     const data = await response.json();
+  //     setPosts(data);
+  //     // console.log(data);
+  //   } catch (error) {
+  //     console.error("Ошибка загрузки данных:", error);
+  //   }
+  // };
+
+
+  const fetchData =() =>{
+        axios
+      .get(
+        `https://64a177210079ce56e2db1781.mockapi.io/picasso`
+      )
+      .then((res) => {
+        setPosts(res.data);
+      });
+  };
+
+
+
+  useEffect(() => {
+
+    fetchData();
+  },[]);
+  // console.log(posts);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Header/>
+      <Routes>
+        <Route path="/" element={<PostList posts={posts} fetchData={fetchData} />} />
+        <Route path="/post/:postId" element={<PostDetails posts={posts} fetchData={fetchData} />} />
+      </Routes>
+    </BrowserRouter>
+   
   );
-}
+};
 
 export default App;
