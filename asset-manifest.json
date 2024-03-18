@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-picasso/static/css/main.b872c436.css",
-    "main.js": "/react-picasso/static/js/main.8385d72f.js",
-    "static/media/Logo_picasso.png": "/react-picasso/static/media/Logo_picasso.06a602281044c744e933.png",
-    "index.html": "/react-picasso/index.html",
-    "main.b872c436.css.map": "/react-picasso/static/css/main.b872c436.css.map",
-    "main.8385d72f.js.map": "/react-picasso/static/js/main.8385d72f.js.map"
+    "main.css": "/static/css/main.b872c436.css",
+    "main.js": "/static/js/main.2ad089fc.js",
+    "static/media/Logo_picasso.png": "/static/media/Logo_picasso.06a602281044c744e933.png",
+    "index.html": "/index.html",
+    "main.b872c436.css.map": "/static/css/main.b872c436.css.map",
+    "main.2ad089fc.js.map": "/static/js/main.2ad089fc.js.map"
   },
   "entrypoints": [
     "static/css/main.b872c436.css",
-    "static/js/main.8385d72f.js"
+    "static/js/main.2ad089fc.js"
   ]
 }
