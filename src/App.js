@@ -11,24 +11,10 @@ import axios from "axios";
 const App = () => {
   const [posts, setPosts] = useState([]);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       "https://64a177210079ce56e2db1781.mockapi.io/picasso"
-  //     );
-  //     const data = await response.json();
-  //     setPosts(data);
-  //     // console.log(data);
-  //   } catch (error) {
-  //     console.error("Ошибка загрузки данных:", error);
-  //   }
-  // };
-
-
   const fetchData = () =>{
         axios
       .get(
-        `https://64a177210079ce56e2db1781.mockapi.io/picasso`
+        `https://jsonplaceholder.typicode.com/posts`
       )
       .then((res) => {
         setPosts(res.data);
