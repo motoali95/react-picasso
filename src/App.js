@@ -7,37 +7,32 @@ import Header from "./components/Header";
 import './styles/App.scss'
 import axios from "axios";
 
-
 const App = () => {
   const [posts, setPosts] = useState([]);
 
-  const fetchData = () =>{
-        axios
-      .get(
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
         `https://jsonplaceholder.typicode.com/posts`
-      )
-      .then((res) => {
-        setPosts(res.data);
-      });
+      );
+      setPosts(response.data);
+    } catch (error) {
+      console.error("Ошибка при загрузке данных:", error);
+    }
   };
 
-
-
   useEffect(() => {
-
     fetchData();
-  },[]);
-  // console.log(posts);
+  }, []);
 
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<PostList posts={posts} fetchData={fetchData} />} />
-        <Route path="/post/:postId" element={<PostDetails posts={posts} fetchData={fetchData} />} />
+        <Route path="/post/:postId" element={<PostDetails posts={posts} />} />
       </Routes>
     </BrowserRouter>
-   
   );
 };
 
